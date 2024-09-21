@@ -2,10 +2,7 @@ import http from 'k6/http';
 import { sleep, check } from 'k6';
 import { numeroAleatorioAte } from './utils/numeros.js';
 export const options = {
-  // A number specifying the number of VUs to run concurrently.
-  //vus: 10,
-  // A string specifying the total duration of the test run.
-  //interations: '10',  
+ 
   cloud:{
     name : 'Exercicio 02',
     projectID : 3715737 
@@ -22,16 +19,7 @@ export default function() {
 
  const respostaHomePageLojinha = http.get('http://165.227.93.41/lojinha-web/v2/'); // Retorna uma Response com Body
  console.log(respostaHomePageLojinha.html().find('h4').text())
- //respostaHomePageLojinha.html().find('h4').text()
- //console.log(respostaHomePageLojinha.status)
- //console.log(respostaHomePageLojinha.status_text)
- //console.log(respostaHomePageLojinha.remote_ip)
- //console.log(respostaHomePageLojinha.body)
- //console.log(respostaHomePageLojinha.html)
- //console.log(respostaHomePageLojinha.html().find('h4').text())
- //console.log(respostaHomePageLojinha.html().find('title').text())
- //console.log(respostaHomePageLojinha.html().find('#btn-entrar').attr('name'))
- //console.log(respostaHomePageLojinha.html().find('#btn-entrar').text('Entrar'))
+
  sleep(numeroAleatorioAte(15));
 
  check(respostaHomePageLojinha, {
@@ -69,3 +57,15 @@ http.post('http://165.227.93.41/lojinha-web/v2/produto', {
 
  sleep(1)
 }
+
+
+ //respostaHomePageLojinha.html().find('h4').text()
+ //console.log(respostaHomePageLojinha.status)
+ //console.log(respostaHomePageLojinha.status_text)
+ //console.log(respostaHomePageLojinha.remote_ip)
+ //console.log(respostaHomePageLojinha.body)
+ //console.log(respostaHomePageLojinha.html)
+ //console.log(respostaHomePageLojinha.html().find('h4').text())
+ //console.log(respostaHomePageLojinha.html().find('title').text())
+ //console.log(respostaHomePageLojinha.html().find('#btn-entrar').attr('name'))
+ //console.log(respostaHomePageLojinha.html().find('#btn-entrar').text('Entrar'))

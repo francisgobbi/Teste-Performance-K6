@@ -2,8 +2,7 @@ import http from 'k6/http';
 import { sleep, check } from 'k6';
 
 export const options = {
-  //vus: 1,
-  //iterations: 1,
+  
   cloud:{
     name : 'Exercicio 04',
     projectID : 3715737 

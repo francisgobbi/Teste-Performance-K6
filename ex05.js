@@ -2,9 +2,7 @@ import http from 'k6/http'
 import { sleep, check, group } from 'k6'
 import { faker } from 'https://esm.sh/@faker-js/faker'
 
-export const options = {
-    //vus: 1,
-    //iterations: 1,
+export const options = {    
     cloud:{
       name : 'Exercicio 05',
       projectID : 3715737 

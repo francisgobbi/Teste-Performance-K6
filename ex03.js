@@ -4,8 +4,7 @@ import { numeroAleatorioAte } from './utils/numeros.js';
 
 
 export const options = {
-  //vus: 1,
-  //iterations: 1,
+  
   cloud:{
     name : 'Exercicio 03',
     projectID : 3715737 
