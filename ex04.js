@@ -1,7 +1,5 @@
 import http from 'k6/http';
 import { sleep, check } from 'k6';
-import { numeroAleatorioAte } from './utils/numeros.js';
-
 
 export const options = {
   vus: 1,
@@ -20,8 +18,8 @@ export default function() {
   })
 
   const corpoDaRequestLogin = {
-    usuario: 'admin',
-    senha: 'admin'
+    usuario: 'cgts',
+    senha: '123456'
   }
 
   const opcoesDaRequestDoLogin = {
@@ -30,6 +28,7 @@ export default function() {
     }
   }
 
+  // respostaLogin não é necessário, deixei apenas para se lembrarem em casos onde queiram extrair o cookie
   const respostaLogin = http.post('http://165.227.93.41/lojinha-web/v2/login/entrar', corpoDaRequestLogin, opcoesDaRequestDoLogin)
 
   // Cookies que mostram que eu fiz login
