@@ -4,6 +4,10 @@ import { sleep, check } from 'k6';
 export const options = {
   //vus: 1,
   //iterations: 1,
+  cloud:{
+    name : 'Exercicio 04',
+    projectID : 3715737 
+  },
   thresholds: {
     http_req_failed: [ 'rate < 0.01' ]
   },

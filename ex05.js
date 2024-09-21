@@ -2,6 +2,22 @@ import http from 'k6/http'
 import { sleep, check, group } from 'k6'
 import { faker } from 'https://esm.sh/@faker-js/faker'
 
+export const options = {
+    //vus: 1,
+    //iterations: 1,
+    cloud:{
+      name : 'Exercicio 05',
+      projectID : 3715737 
+    },
+    thresholds: {
+      http_req_failed: [ 'rate < 0.01' ]
+    },
+    stages: [
+      { target: 20, duration: '5s' },
+      { target: 20, duration: '20s' },
+      { target: 0, duration: '5s' },
+    ]
+  };
 export default function() {
     let tokenColetadoNaResposta;
 

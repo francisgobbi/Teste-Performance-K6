@@ -3,9 +3,18 @@ import { sleep, check } from 'k6';
 import { numeroAleatorioAte } from './utils/numeros.js';
 export const options = {
   // A number specifying the number of VUs to run concurrently.
-  vus: 10,
+  //vus: 10,
   // A string specifying the total duration of the test run.
-  interations: '10',  
+  //interations: '10',  
+  cloud:{
+    name : 'Exercicio 02',
+    projectID : 3715737 
+  },
+  stages: [
+    { target: 20, duration: '5s' },
+    { target: 20, duration: '20s' },
+    { target: 0, duration: '5s' },
+  ]
 };
 
 
