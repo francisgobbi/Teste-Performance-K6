@@ -43,10 +43,7 @@ export function jaEUsuario() {
   
   http.post(
     'http://165.227.93.41/lojinha-web/v2/login/entrar', 
-    {
-      usuario: 'cgts',
-      senha: '123456'
-    }, 
+    
     {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
