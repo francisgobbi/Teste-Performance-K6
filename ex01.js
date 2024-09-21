@@ -9,6 +9,10 @@ export const options = {
   duration: '10s',
   thresholds: {
     http_req_waiting: ['p(90) >= 10' , 'p(90) <= 50' , 'avg < 60']
+  },
+  cloud:{
+    name : 'Exercicio 01',
+    projectID : 3715737 
   }
   //interactions: 10, 
 

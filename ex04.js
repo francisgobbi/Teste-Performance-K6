@@ -18,8 +18,8 @@ export default function() {
   })
 
   const corpoDaRequestLogin = {
-    usuario: 'cgts',
-    senha: '123456'
+    usuario: __ENV.USUARIOLOGIN,
+    senha: __ENV.USUARIOSENHA
   }
 
   const opcoesDaRequestDoLogin = {

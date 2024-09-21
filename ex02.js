@@ -10,6 +10,7 @@ export const options = {
 
 
 export default function() {
+
  const respostaHomePageLojinha = http.get('http://165.227.93.41/lojinha-web/v2/'); // Retorna uma Response com Body
  console.log(respostaHomePageLojinha.html().find('h4').text())
  //respostaHomePageLojinha.html().find('h4').text()
@@ -32,8 +33,8 @@ export default function() {
  })
 
  const coproDaRequestLogin = {
-    usuario: 'admin' ,
-    senha: 'admin'
+    usuario: __ENV.USUARIOLOGIN ,
+    senha: __ENV.USUARIOSENHA
  }
  
  const opcoesDaRequestDoLogin = {

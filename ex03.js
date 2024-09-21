@@ -20,8 +20,8 @@ export default function() {
   })
 
   const corpoDaRequestLogin = {
-    usuario: 'admin',
-    senha: 'admin'
+    usuario: __ENV.USUARIOLOGIN,
+    senha: __ENV.USUARIOSENHA
   }
 
   const opcoesDaRequestDoLogin = {

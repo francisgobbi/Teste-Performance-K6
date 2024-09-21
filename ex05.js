@@ -9,8 +9,8 @@ export default function() {
         const endpointRequestLogin = 'http://165.227.93.41/lojinha/v2/login'
 
         const bodyRequestLogin = JSON.stringify({
-            usuarioLogin: 'admin',
-            usuarioSenha: 'admin'
+            usuarioLogin: __ENV.USUARIOLOGIN,
+            usuarioSenha: __ENV.USUARIOSENHA
         })
 
         const optionsRequestLogin = {
