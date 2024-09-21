@@ -1,6 +1,10 @@
 import http from 'k6/http';
 import { sleep } from 'k6';
 
+const bodyRequestLogin = JSON.stringify({
+    usuarioLogin: __ENV.USUARIOLOGIN,
+    usuarioSenha: __ENV.USUARIOSENHA
+})
 export const options = {
   cloud: {
     name: 'Exercício 06',
@@ -26,15 +30,16 @@ export const options = {
         startTime: '10s'
     }
   }
+  
 }
 
 export function desocupado() { 
-  http.get('http://165.227.93.41/lojinha-web/v2/');
+  http.get('http://165.227.93.41/lojinha-web/v2/',bodyRequestLogin);
   sleep(1);
 }
 
 export function jaEUsuario() { 
-  http.get('http://165.227.93.41/lojinha-web/v2/');
+  http.get('http://165.227.93.41/lojinha-web/v2/',bodyRequestLogin);
   
   http.post(
     'http://165.227.93.41/lojinha-web/v2/login/entrar', 
@@ -49,8 +54,7 @@ export function jaEUsuario() {
     }
   )
 
-  http.get('http://165.227.93.41/lojinha-web/v2/produto')
-  
+  http.get('http://165.227.93.41/lojinha-web/v2/produto')  
   sleep(1);
 }
 
