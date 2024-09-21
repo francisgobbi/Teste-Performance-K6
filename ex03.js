@@ -4,11 +4,16 @@ import { numeroAleatorioAte } from './utils/numeros.js';
 
 
 export const options = {
-  vus: 1,
-  iterations: 1,
+  //vus: 1,
+  //iterations: 1,
   thresholds: {
     http_req_failed: [ 'rate < 0.01' ]
-  }
+  },
+  stages: [
+    { target: 20, duration: '5s' },
+    { target: 20, duration: '20s' },
+    { target: 0, duration: '5s' },
+  ]
 };
 
 export default function() {
