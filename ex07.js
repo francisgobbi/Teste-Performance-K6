@@ -2,7 +2,7 @@ import http from 'k6/http';
 import { sleep } from 'k6';
 import { SharedArray } from 'k6/data'
 
-const dados = new SharedArray('dados', () => JSON.parse(open('./dados/ex05.json')))
+const dados = new SharedArray('dados', () => JSON.parse(open('./dados/ex07.json')))
 
 export const options = {
   cloud: {
