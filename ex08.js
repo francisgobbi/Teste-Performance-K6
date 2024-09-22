@@ -28,7 +28,8 @@ export default async function() {
     await navegador.fill('#usuario','admin')
     await navegador.fill('#senha','admin')
     await navegador.screenshot({path: 'evidencias/1.png'})
-    await navegador.click('#btn-entrar')    
-
-    sleep(10)
+    await navegador.click('#btn-entrar') 
+    sleep(10)   
+    await navegador.screenshot({path: 'evidencias/2.png'})
+    sleep(20)
 }
